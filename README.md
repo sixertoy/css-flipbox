@@ -1,6 +1,6 @@
 # CSS-Flipbox
 
-* Pure CSS Flip Effect
+> Pure CSS Flip Effect
 
 ## Install
 

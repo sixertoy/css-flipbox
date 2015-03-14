@@ -1,4 +1,15 @@
 documentation:
   - markdown
+build:
+  - clean:all
+  - less
+  - autoprefixer
+  - mustacher
+serve:
+  - jshint
+  - build
+  - connect
 default:
+  - jshint
+  - build
   - watch

@@ -5,5 +5,13 @@ module.exports = {
         cwd: '.',
         livereload: 1337,
         livereloadOnError: false
+    },
+    hbs: {
+        files: ['./src/*.hbs', './src/*.tpl'],
+        tasks: ['clean:html', 'mustacher']
+    },
+    less: {
+        files: ['./src/less/*.less'],
+        tasks: ['clean:css', 'less', 'autoprefixer', 'clean:temp']
     }
 };

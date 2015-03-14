@@ -76,6 +76,11 @@ img {
 *
 *
  ######################################### */
+/** --------------------------------------
+ *
+ * Page type
+ *
+ */
 .flipbox.flipbox-page {
   margin: 20px auto;
 }
@@ -117,38 +122,13 @@ img {
 .flipbox.flipbox-page .card-content-bottom {
   background: rgba(0, 0, 0, 0.25);
 }
+/** --------------------------------------
+ *
+ * Simple type
+ *
+ */
 .flipbox.flipbox-simple {
   margin: 20px auto;
-}
-.flipbox.flipbox-simple,
-.flipbox.flipbox-simple .card,
-.flipbox.flipbox-simple .wrapper {
-  width: 800px;
-  height: 320px;
-}
-.flipbox.flipbox-simple.flipbox-simple .wrapper {
-  -webkit-transition: all 2s;
-          transition: all 2s;
-}
-.flipbox.flipbox-simple.flipbox-page .wrapper .card-cover,
-.flipbox.flipbox-simple.flipbox-page .wrapper .card-content-top,
-.flipbox.flipbox-simple.flipbox-page .wrapper .card-content-bottom {
-  /* @height / 2 */
-  height: 160px;
-}
-.flipbox.flipbox-simple.flipbox-page .wrapper .card-content-bottom {
-  top: 160px;
-}
-.flipbox.flipbox-simple.flipbox-page .wrapper .card {
-  /* @time / 2 */
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-.flipbox.flipbox-simple.flipbox-page .wrapper .card-cover,
-.flipbox.flipbox-simple.flipbox-page .wrapper.hover .card-content-bottom,
-.flipbox.flipbox-simple.flipbox-page .wrapper:hover .card-content-bottom {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
 }
 .flipbox.flipbox-simple .card-cover {
   background: #ACE539;
@@ -156,4 +136,74 @@ img {
 .flipbox.flipbox-simple .card-content {
   color: #FFF;
   background: #333333;
+}
+/** --------------------------------------
+ *
+ * Vertical
+ *
+ */
+.flipbox.flipbox-vertical,
+.flipbox.flipbox-vertical .card,
+.flipbox.flipbox-vertical .wrapper {
+  width: 800px;
+  height: 320px;
+}
+.flipbox.flipbox-vertical.flipbox-simple .wrapper {
+  -webkit-transition: all 0.6s;
+          transition: all 0.6s;
+}
+.flipbox.flipbox-vertical.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-vertical.flipbox-page .wrapper .card-content-top,
+.flipbox.flipbox-vertical.flipbox-page .wrapper .card-content-bottom {
+  /* @height / 2 */
+  height: 160px;
+}
+.flipbox.flipbox-vertical.flipbox-page .wrapper .card-content-bottom {
+  top: 160px;
+}
+.flipbox.flipbox-vertical.flipbox-page .wrapper .card {
+  /* @time / 2 */
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.flipbox.flipbox-vertical.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-vertical.flipbox-page .wrapper.hover .card-content-bottom,
+.flipbox.flipbox-vertical.flipbox-page .wrapper:hover .card-content-bottom {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+/** --------------------------------------
+ *
+ * Horizontal
+ *
+ */
+.flipbox.flipbox-horizontal,
+.flipbox.flipbox-horizontal .card,
+.flipbox.flipbox-horizontal .wrapper {
+  width: 800px;
+  height: 320px;
+}
+.flipbox.flipbox-horizontal.flipbox-simple .wrapper {
+  -webkit-transition: all 2s;
+          transition: all 2s;
+}
+.flipbox.flipbox-horizontal.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-horizontal.flipbox-page .wrapper .card-content-top,
+.flipbox.flipbox-horizontal.flipbox-page .wrapper .card-content-bottom {
+  /* @height / 2 */
+  height: 160px;
+}
+.flipbox.flipbox-horizontal.flipbox-page .wrapper .card-content-bottom {
+  top: 160px;
+}
+.flipbox.flipbox-horizontal.flipbox-page .wrapper .card {
+  /* @time / 2 */
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+.flipbox.flipbox-horizontal.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-horizontal.flipbox-page .wrapper.hover .card-content-bottom,
+.flipbox.flipbox-horizontal.flipbox-page .wrapper:hover .card-content-bottom {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }

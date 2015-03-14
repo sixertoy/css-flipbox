@@ -25,7 +25,7 @@
                     </h1>
                 </div>
                 -->
-                <header class="left-column grid-35 tablet-grid-35 hide-on-mobile grid-parent">
+                <header class="left-column grid-35 tablet-grid-35 mobile-grid-100 grid-parent">
                     <h1>CSS-Flipbox</h1>
                     <p>CSS Only Flip Effect</p>
                     <p class="view">

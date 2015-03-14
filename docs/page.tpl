@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>flipbox | Documentation</title>
-    <style></style>
+    <link href="css/github-markdown.css" rel="stylesheet">
 </head>
 <body>
     <%= content %>

@@ -12,7 +12,10 @@ module.exports = {
                     index: 'index.html'
                 }
             },
-            open: true,
+            open: {
+                appName: 'firefox',
+                target: 'http://localhost:9000'
+            },
             keepalive: true,
             protocol: 'http',
             livereload: false,

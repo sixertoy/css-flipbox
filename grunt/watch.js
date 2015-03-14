@@ -7,7 +7,7 @@ module.exports = {
         livereloadOnError: false
     },
     hbs: {
-        files: ['./src/*.hbs', './src/*.tpl'],
+        files: ['./src/partials/*.hbs', './src/*.tpl'],
         tasks: ['clean:html', 'mustacher']
     },
     less: {

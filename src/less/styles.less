@@ -1,9 +1,5 @@
 @import '_flipbox.less';
 
-// Typos
-@playball: 'Playball', cursive;
-@allerta: 'Allerta', sans-serif;
-
 // Mixin
 .hidden() {
     width: 0;
@@ -26,15 +22,14 @@
  *
  */
 
-body, html{
+body, html {
     min-height: 100%;
 }
 
-body{
+body {
     font-size:12px;
     color: #272727;
     background: #FFF;
-    font-family: @allerta;
     text-rendering: optimizeLegibility;
 }
 
@@ -53,7 +48,74 @@ img {
  * Defaults
  *
  */
-.container{
+.container {
     margin: 0 auto;
     max-width: 800px;
+    margin-bottom: 80px;
+}
+
+.markdown-body pre {
+    border-left: 4px solid #0088FF;
+}
+
+/** -----------------------------------------------------
+ *
+ * Flipbox
+ *
+ */
+.flipbox.flipbox-page.flipbox-vertical,
+.flipbox.flipbox-page.flipbox-horizontal{
+    .flipbox(800px, 320px, 0.6s);
+    margin: 20px auto;
+    .card-cover{
+        background: #ACE539;
+    }
+    .card-content-top,
+    .card-content-bottom{
+        background: rgba(0, 0, 0, 0.25);
+    }
+}
+
+.flipbox.flipbox-simple.flipbox-vertical,
+.flipbox.flipbox-simple.flipbox-horizontal{
+    .flipbox(800px, 320px, 0.6s);
+    margin: 20px auto;
+    .card-cover{
+        background: #ACE539;
+    }
+    .card-content {
+        color: #FFF;
+        background: rgba(51, 51, 51, 1);
+    }
+}
+
+
+/** -----------------------------------------------------
+ *
+ * Flipbox jolie demo
+ *
+ */
+.flipbox {
+    .demo {
+        display: block;
+        max-width: 760px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    .inner{
+        color: #FFF;
+        padding: 20px;
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    }
+    .code {
+        color: #C4C4C4;
+    }
+
+    .class {
+        color: #FF00CC;
+    }
 }

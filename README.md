@@ -5,6 +5,8 @@
 
 ## Flipbox page
 
+> HTML
+
 ```html
 <div class="flipbox flipbox-page">
     <div class="wrapper">
@@ -19,6 +21,8 @@
     </div>
 </div>
 ```
+
+> Less
 
 ```less
 .flipbox.flipbox-page {
@@ -37,6 +41,8 @@
 
 ## Flipbox simple
 
+> Less
+
 ```less
 .flipbox.flipbox-simple{
     margin: 20px auto;
@@ -51,6 +57,8 @@
 ```
 
 ### Horizontal
+
+> HTML
 
 ```html
 <div class="flipbox flipbox-simple flipbox-horizontal">
@@ -77,6 +85,8 @@
 </div>
 ```
 
+> Less
+
 ```less
 .flipbox.flipbox-horizontal{
     .flipbox-extend(800px, 320px, 2s);
@@ -84,6 +94,8 @@
 ```
 
 ### Vertical
+
+> HTML
 
 ```html
 <div class="flipbox flipbox-simple flipbox-vertical">
@@ -110,6 +122,8 @@
 </div>
 ```
 
+> Less
+
 ```less
 .flipbox.flipbox-vertical{
     .flipbox-extend(800px, 320px, 0.6s);
@@ -118,9 +132,13 @@
 
 ## CSS Overrides
 
+> HTML
+
 ```html
 <link rel="stylesheet" type="text/css" href="/css/flipbox.css" />
 ```
+
+> CSS
 
 ```css
 .flipbox,
@@ -161,6 +179,8 @@
 ```
 
 ## Less Mixin
+
+> Less
 
 ```less
 @import 'flipbox.less';

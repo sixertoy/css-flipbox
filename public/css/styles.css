@@ -5,6 +5,22 @@
 *
 *
  ######################################### */
+/**
+ *
+ * staytuned
+ * Staytuned 2015
+ *
+ * https://github.com/sixertoy/staytuned
+ *
+ * sixertoy [sixertoy.github@gmail.com]
+ *
+ */
+/** -----------------------------------------------------
+ *
+ * Functions
+ *
+ */
+/* alias */
 /** -----------------------------------------------------
  *
  * HTML
@@ -15,6 +31,7 @@ html {
   min-height: 100%;
 }
 body {
+  overflow-x: hidden;
   font-size: 12px;
   color: #272727;
   background: #FFF;
@@ -41,6 +58,131 @@ img {
 }
 .markdown-body pre {
   border-left: 4px solid #0088FF;
+}
+.left-column,
+.bottom-column,
+.left-column a,
+.bottom-column a {
+  color: #777777;
+  font: 300 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bottom-column {
+  bottom: 0;
+  position: fixed;
+  text-align: left;
+}
+.bottom-column a {
+  color: #3399cc;
+  font-weight: 400;
+  text-decoration: none;
+}
+.bottom-column a small {
+  color: #777777;
+  display: block;
+  font-size: 11px;
+  margin-top: -0.6em;
+}
+.bottom-column p {
+  margin-bottom: 0;
+}
+.bottom-column p + p {
+  margin-bottom: 10px;
+}
+.left-column {
+  position: fixed;
+  padding-top: 60px;
+}
+.left-column h1 {
+  font-size: 18px;
+}
+.left-column p,
+.left-column ul,
+.left-column ol,
+.left-column table,
+.left-column pre,
+.left-column dl {
+  margin: 0 0 20px;
+}
+.left-column a {
+  color: #3399cc;
+  font-weight: 400;
+  text-decoration: none;
+}
+.left-column a small {
+  color: #777777;
+  display: block;
+  font-size: 11px;
+  margin-top: -0.6em;
+}
+.left-column ul {
+  /* <IE7> */
+  *zoom: 1;
+  /* <IE7> */
+  background: -webkit-linear-gradient(center top, #f8f8f8 0%, #dddddd 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: linear-gradient(center top, #f8f8f8 0%, #dddddd 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 rgba(0, 0, 0, 0.03) inset;
+  height: 40px;
+  list-style: outside none none;
+  padding: 0;
+  width: 270px;
+}
+.left-column ul:after {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.left-column ul:before {
+  clear: both;
+}
+.left-column ul li {
+  margin: 0;
+  border-right: 1px solid #d2d2d2;
+  float: left;
+  height: 40px;
+  width: 89px;
+}
+.left-column ul li + li {
+  border-left: 1px solid #ffffff;
+  width: 88px;
+}
+.left-column ul li + li + li {
+  border-right: medium none;
+  width: 89px;
+}
+.left-column ul a {
+  color: #999999;
+  display: block;
+  font-size: 11px;
+  height: 40px;
+  line-height: 1;
+  padding-top: 6px;
+  text-align: center;
+}
+.left-column ul a strong {
+  color: #222222;
+  display: block;
+  font-size: 14px;
+}
+.right-column {
+  padding-top: 60px;
+  margin-bottom: 160px;
+}
+.main-header {
+  height: 100px;
+  margin-bottom: 40px;
+  background: #0088FF;
+}
+@media (max-width: 767px) {
+  .left-column {
+    position: relative;
+  }
 }
 /** -----------------------------------------------------
  *
@@ -145,7 +287,7 @@ img {
 .flipbox.flipbox-vertical,
 .flipbox.flipbox-vertical .card,
 .flipbox.flipbox-vertical .wrapper {
-  width: 800px;
+  width: 740px;
   height: 320px;
 }
 .flipbox.flipbox-vertical.flipbox-simple .wrapper {
@@ -180,7 +322,7 @@ img {
 .flipbox.flipbox-horizontal,
 .flipbox.flipbox-horizontal .card,
 .flipbox.flipbox-horizontal .wrapper {
-  width: 800px;
+  width: 740px;
   height: 320px;
 }
 .flipbox.flipbox-horizontal.flipbox-simple .wrapper {

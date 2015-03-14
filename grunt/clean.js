@@ -8,5 +8,5 @@ module.exports = {
     ],
     temp: ['temp/**/*'],
     html: ['public/index.html'],
-    css: ['public/css/styles.css']
+    css: ['public/css/styles.css', 'public/css/flipbox.css']
 };

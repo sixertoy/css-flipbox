@@ -5,8 +5,41 @@
 *
 *
  ######################################### */
+/**
+ *
+ * staytuned
+ * Staytuned 2015
+ *
+ * https://github.com/sixertoy/staytuned
+ *
+ * sixertoy [sixertoy.github@gmail.com]
+ *
+ */
 
-// Mixin
+/** -----------------------------------------------------
+ *
+ * Functions
+ *
+ */
+.clearfixed() {
+    &:after {
+        content: ".";
+        display: block;
+        overflow: hidden;
+        visibility: hidden;
+        font-size: 0;
+        line-height: 0;
+        width: 0;
+        height: 0;
+    }
+    &:before {
+        clear: both;
+    }
+    /* <IE7> */
+    *zoom: 1;
+    /* <IE7> */
+}
+
 .hidden() {
     width: 0;
     margin: 0;
@@ -22,6 +55,22 @@
     .no-select();
 }
 
+.float(@direction:left){
+    float:@direction;
+    width: auto;
+    display: block;
+}
+
+/* alias */
+.floating(@direction:left){
+    .float(@direction);
+}
+
+.no-select(){
+    user-select: none;
+}
+
+
 /** -----------------------------------------------------
  *
  * HTML
@@ -33,6 +82,7 @@ body, html {
 }
 
 body {
+    overflow-x: hidden;
     font-size:12px;
     color: #272727;
     background: #FFF;
@@ -63,6 +113,116 @@ img {
 
 .markdown-body pre {
     border-left: 4px solid #0088FF;
+}
+
+.left-column,
+.bottom-column{
+    &, a{
+        color: rgb(119, 119, 119);
+        font: 300 14px/1.5 Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+}
+
+.bottom-column {
+    bottom: 0;
+    position: fixed;
+    text-align: left;
+    a {
+        color: rgb(51, 153, 204);
+        font-weight: 400;
+        text-decoration: none;
+        small{
+            color: rgb(119, 119, 119);
+            display: block;
+            font-size: 11px;
+            margin-top: -0.6em;
+        }
+    }
+    p {
+        margin-bottom: 0;
+        & + p{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.left-column{
+    position: fixed;
+    padding-top:60px;
+    h1{
+        font-size:18px;
+    }
+    p, ul, ol, table, pre, dl{
+        margin: 0 0 20px;
+    }
+    a{
+        color: rgb(51, 153, 204);
+        font-weight: 400;
+        text-decoration: none;
+        small{
+            color: rgb(119, 119, 119);
+            display: block;
+            font-size: 11px;
+            margin-top: -0.6em;
+        }
+    }
+    ul {
+        .clearfixed();
+        background: linear-gradient(center top , rgb(248, 248, 248) 0%, rgb(221, 221, 221) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border: 1px solid rgb(210, 210, 210);
+        border-radius: 5px;
+        box-shadow: 0 1px 0 rgb(255, 255, 255) inset, 0 -1px 0 rgba(0, 0, 0, 0.03) inset;
+        height: 40px;
+        list-style: outside none none;
+        padding: 0;
+        width: 270px;
+        li {
+            margin:0;
+            border-right: 1px solid rgb(210, 210, 210);
+            float: left;
+            height: 40px;
+            width: 89px;
+            & + li{
+                border-left: 1px solid rgb(255, 255, 255);
+                width: 88px;
+                & + li{
+                    border-right: medium none;
+                    width: 89px;
+                }
+            }
+        }
+        a {
+            color: rgb(153, 153, 153);
+            display: block;
+            font-size: 11px;
+            height: 40px;
+            line-height: 1;
+            padding-top: 6px;
+            text-align: center;
+            strong {
+                color: rgb(34, 34, 34);
+                display: block;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.right-column{
+    padding-top:60px;
+    margin-bottom: 160px;
+}
+
+.main-header{
+    height:100px;
+    margin-bottom:40px;
+    background: #0088FF;
+}
+
+@media (max-width: 767px) {
+    .left-column{
+        position: relative;
+    }
 }
 
 

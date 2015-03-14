@@ -11,9 +11,10 @@
     <script src="/js/vendor/html5shiv.min.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/css/vendor/reset.css" />
-<link rel="stylesheet" type="text/css" href="/css/vendor/text.css" />
-<link rel="stylesheet" type="text/css" href="/css/vendor/github-markdown.css" />
+<link rel="stylesheet" type="text/css" href="/css/vendor/reset.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/vendor/text.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/vendor/github-markdown.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/vendor/unsemantic-grid-responsive-tablet-no-ie7.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/flipbox.css" />
 <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
@@ -31,11 +32,31 @@
 
     <div id="page">
 
-        <div id="main-header">
-        </div>
-
         <div id="main-body">
-            <div class="container">
+            <div class="grid-container">
+                <!--
+                <div class="main-header push-35 grid-65 tablet-push-35 tablet-grid-65 mobile-grid-100">
+                    <h1>
+                        <span class="title">CSS-Flipbox</span>
+                        <a href="http://gruntjs.com/"><img alt="Built with Grunt" src="https://cdn.gruntjs.com/builtwith.png"></a>
+                        <a href="LICENSE-MIT"><img alt="MIT License" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
+                    </h1>
+                </div>
+                -->
+                <header class="left-column grid-35 tablet-grid-35 hide-on-mobile grid-parent">
+                    <h1>CSS-Flipbox</h1>
+                    <p>CSS Only Flip Effect</p>
+                    <p class="view">
+                        <a href="https://github.com/sixertoy/css-flipbox">View the Project on GitHub <small>sixertoy/css-flipbox</small></a>
+                    </p>
+                    <ul>
+                        <li><a href="https://github.com/sixertoy/css-flipbox/zipball/master">Download <strong>ZIP File</strong></a></li>
+                        <li><a href="https://github.com/sixertoy/css-flipbox/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                        <li><a href="https://github.com/sixertoy/css-flipbox">View On <strong>GitHub</strong></a></li>
+                    </ul>
+                </header>
+                <section class="right-column push-35 grid-65 tablet-push-35 tablet-grid-65 mobile-grid-100 grid-parent">
+                    <div class="grid-100">
     <!-- code -->
     <div class="markdown-body">
         <h1>
@@ -70,7 +91,7 @@
     </div>
     <!-- endof demo -->
 </div>
-            <div class="container">
+                    <div class="grid-100">
     <!-- code -->
     <div class="markdown-body">
         <h1>
@@ -78,7 +99,7 @@
         </h1>
         <pre>
 .flipbox.flipbox-vertical
-    .flipbox-extend(800px, 320px, 2s);
+    .flipbox-extend(740px, 320px, 2s);
     margin: 20px auto;
     .card-cover{
         background: #ACE539;
@@ -93,14 +114,14 @@
     <!-- demo -->
     <div class="flipbox flipbox-simple flipbox-vertical">
         <div class="wrapper">
-            <div class="card card-cover" style="background: url(http://placehold.it/800x320&text=vertical) no-repeat left top;"></div>
+            <div class="card card-cover" style="background: url(http://placehold.it/740x320&text=vertical) no-repeat left top;"></div>
             <div class="card card-content">
                 <div class="inner">
                     <h1><span>Vertical flip axis</span></h1>
                     <pre class="demo">
 &lt;div <span class="class">class="flipbox flipbox-simple flipbox-vertical"</span>&gt;
     &lt;div <span class="class">class="wrapper"</span>&gt;
-        &lt;div <span class="class">class="card card-cover" style="</span><span class="code">background: url(http://placehold.it/800x320);</span><span class="class">"</span>&gt;
+        &lt;div <span class="class">class="card card-cover" style="</span><span class="code">background: url(http://placehold.it/740x320);</span><span class="class">"</span>&gt;
         &lt;/div&gt;
         &lt;div <span class="class">class="card card-content"</span>&gt;
             <span class="code">&lt;h1&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;&lt;/h1&gt;</span>
@@ -115,7 +136,7 @@
     </div>
     <!-- endof demo -->
 </div>
-            <div class="container">
+                    <div class="grid-100">
     <!-- code -->
     <div class="markdown-body">
         <h1>
@@ -130,7 +151,7 @@
             <div class="content">
                 <pre>
 .flipbox.flipbox-horizontal{
-    .flipbox-extend(800px, 320px, 2s);
+    .flipbox-extend(740px, 320px, 2s);
     margin: 20px auto;
     .card-cover{
         background: #ACE539;
@@ -147,14 +168,14 @@
     <!-- demo -->
     <div class="flipbox flipbox-simple flipbox-horizontal">
         <div class="wrapper">
-            <div class="card card-cover" style="background: url(http://placehold.it/800x320&text=horizontal) no-repeat left top;"></div>
+            <div class="card card-cover" style="background: url(http://placehold.it/740x320&text=horizontal) no-repeat left top;"></div>
             <div class="card card-content">
                 <div class="inner">
                     <h1><span>Horizontal flip axis</span></h1>
                     <pre class="demo">
 &lt;div <span class="class">class="flipbox flipbox-simple flipbox-horizontal"</span>&gt;
     &lt;div <span class="class">class="wrapper"</span>&gt;
-        &lt;div <span class="class">class="card card-cover" style="</span><span class="code">background: url(http://placehold.it/800x320);</span><span class="class">"</span>&gt;
+        &lt;div <span class="class">class="card card-cover" style="</span><span class="code">background: url(http://placehold.it/740x320);</span><span class="class">"</span>&gt;
         &lt;/div&gt;
         &lt;div <span class="class">class="card card-content"</span>&gt;
             <span class="code">&lt;h1&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;&lt;/h1&gt;</span>
@@ -169,6 +190,12 @@
     </div>
     <!-- endof demo -->
 </div>
+                </section>
+                <footer class="bottom-column grid-35 tablet-grid-35 mobile-grid-100 grid-parent">
+                    <p>This project is maintained by <a href="https://github.com/sixertoy">sixertoy</a></p>
+                    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+                </footer>
+            </div>
         </div>
 
     </div>

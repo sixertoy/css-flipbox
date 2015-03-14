@@ -10,6 +10,10 @@ module.exports = {
         files: ['./src/partials/**/*.hbs', './src/*.tpl'],
         tasks: ['clean:html', 'mustacher']
     },
+    css: {
+        files: ['./src/css/vendor/*.css'],
+        tasks: ['cssmin']
+    },
     less: {
         files: ['./src/less/*.less'],
         tasks: ['clean:css', 'less', 'autoprefixer', 'clean:temp']

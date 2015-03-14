@@ -3,13 +3,13 @@
 
 <head>
     <title>CSS Flipbox</title>
-    {{$include 'body_head'}}
+    {{$include 'body/head'}}
 </head>
 
 <body class="home">
 
     <div id="before-body">
-        {{$include 'body_before'}}
+        {{$include 'body/browser_happy'}}
     </div>
 
     <div id="page">
@@ -26,7 +26,7 @@
     </div>
 
     <div id="after-body">
-        {{$include 'body_after'}}
+        {{$include 'body/scripts'}}
         {{$livereload 1337}}
     </div>
 

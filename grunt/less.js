@@ -6,7 +6,8 @@ module.exports = {
     },
     build: {
         files: {
-            './temp/css/styles.css': './src/less/styles.less'
+            './temp/css/styles.css': './src/less/styles.less',
+            './temp/css/flipbox.css': './src/less/flipbox.less'
         }
     }
 };

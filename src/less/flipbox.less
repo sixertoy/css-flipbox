@@ -1,0 +1,215 @@
+/**
+ *
+ * # CSS Flipbox
+ *
+ * # License
+ *
+ * The MIT License (MIT)
+ * Copyright (c) 2015 Matthieu Lassalvy sixertoy.github@gmail.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *
+ * # Usage
+ *
+ * ## touch device
+ *      > ontouchstart="this.classList.toggle('hover');"
+ *
+ */
+// --------------------------------------------
+//
+// Variables/Extend
+//
+.flipbox-extend(@width, @height, @time){
+    &,
+    .card,
+    .wrapper{
+        width: @width;
+        height: @height;
+    }
+    &.flipbox-simple .wrapper{
+        transition: all @time;
+    }
+    &.flipbox-page .wrapper{
+        @size: (@height / 2);
+        @duration: (@time / 2);
+        .card {
+            &-cover,
+            &-content-top,
+            &-content-bottom {
+                /* @height / 2 */
+                height: @size;
+            }
+            &-content-bottom {
+                top: @size;
+            }
+        }
+        .card {
+            /* @time / 2 */
+            transition-duration: @duration;
+        }
+        .card-cover,
+        &.hover.card-content-bottom,
+        &:hover .card-content-bottom{
+            transition-delay: @duration;
+        }
+    }
+}
+// --------------------------------------------
+//
+// Flipbox base
+//
+.flipbox-base(){
+    .wrapper{
+        position: relative;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+    .card{
+        top: 0;
+        left: 0;
+        z-index: 1;
+        position: absolute;
+    }
+}
+// --------------------------------------------
+//
+// Simple Types Horizontal & Certical
+//
+.flipbox-simple(){
+    &.flipbox-simple{
+        perspective: 1000px;
+        .wrapper{
+            // http://placehold.it/596x280
+            transform: rotateX(0deg);
+            transform: rotateY(0deg);
+            transform-origin: center center;
+            .card-cover{
+                    z-index: 2;
+            }
+        }
+        &.flipbox-vertical{
+            .card-content,
+            &:hover .wrapper,
+            &.hover.wrapper {
+                transform: rotateY(180deg);
+            }
+        }
+        &.flipbox-horizontal{
+            .card-content,
+            &:hover .wrapper,
+            &.hover .wrapper {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+}
+// --------------------------------------------
+//
+// Page Type
+//
+.flipbox-page(){
+    &.flipbox-page {
+        .wrapper {
+            perspective: 1000px;
+        }
+        .card {
+            backface-visibility: hidden;
+            // last props
+            transition-delay: 0s;
+            transition-property: transform;
+            transition-timing-function: linear;
+            &-content-top,
+            &-content-bottom {
+                z-index: 2;
+            }
+            &-content-bottom {
+                z-index: 3;
+                transform: rotateX(90deg);
+                transform-origin: center top;
+            }
+            &-cover{
+                z-index: 4;
+                transform: rotateX(0deg);
+                transform-origin: center bottom;
+            }
+        }
+        &.hover,
+        &:hover {
+            .card-cover {
+                transition-delay: 0s;
+                transform: rotateX(-90deg);
+            }
+            .card-content-bottom{
+                transform: rotateX(0deg);
+            }
+        }
+    }
+}
+
+// Mixin
+.flipbox(@width: 800px, @height: 320px, @time: 0.6s){
+    .flipbox-extend(@width, @height, @time);
+    .flipbox-base();
+    .flipbox-simple();
+    .flipbox-page();
+}
+
+/** -----------------------------------------------------------
+ *
+ * Variables/Extend
+ *
+ * ## Defaults
+ * > width: 800px;
+ * > height: 320px;
+ * > transition duration: 0.6s
+ *
+ */
+.flipbox {
+    .flipbox-extend(800px, 320px, 0.6s);
+}
+
+/** -----------------------------------------------------------
+ *
+ * Flipbox base
+ *
+ */
+.flipbox {
+    .flipbox-base();
+}
+
+/** -----------------------------------------------------------
+ *
+ * Flipbox type
+ * Simple horizontal & vertical
+ *
+ */
+.flipbox {
+    .flipbox-simple();
+}
+
+/** -----------------------------------------------------------
+ *
+ * Flipbox type
+ * Page
+ *
+ */
+.flipbox {
+    .flipbox-page();
+}

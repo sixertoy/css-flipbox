@@ -1,74 +1,20 @@
-@import '_flipbox.less';
+@import (reference) 'flipbox.less';
+@import '_jolie-demo.less';
 
-// Mixin
-.hidden() {
-    width: 0;
-    margin: 0;
-    height: 0;
-    padding: 0;
-    outline: none;
-    display: none;
-    line-height: 0;
-    overflow: hidden;
-    user-select: none;
-    letter-spacing: 0;
-    visibility: hidden;
-    .no-select();
-}
-
-/** -----------------------------------------------------
- *
- * HTML
- *
- */
-
-body, html {
-    min-height: 100%;
-}
-
-body {
-    font-size:12px;
-    color: #272727;
-    background: #FFF;
-    text-rendering: optimizeLegibility;
-}
-
-img {
-    margin:0;
-    padding:0;
-    border: 0;
-    font-size: 0;
-    line-height: 0;
-    vertical-align: top;
-    display: inline-block;
-}
-
-/** -----------------------------------------------------
- *
- * Defaults
- *
- */
-.container {
-    margin: 0 auto;
-    max-width: 800px;
-    margin-bottom: 80px;
-}
-
-.markdown-body pre {
-    border-left: 4px solid #0088FF;
-}
-
-/** -----------------------------------------------------
- *
- * Flipbox
- *
- */
-.flipbox.flipbox-page.flipbox-vertical,
-.flipbox.flipbox-page.flipbox-horizontal{
-    .flipbox(800px, 320px, 0.6s);
+/* #########################################
+*
+*
+* Flipbox styles
+* as Less Mixin
+*
+*
+ ######################################### */
+.flipbox.flipbox-page {
+    .flipbox-extend(600px, 200px, 2s);
     margin: 20px auto;
     .card-cover{
-        background: #ACE539;
+        background-color: #ACE539;
+        background: url(http://placehold.it/800x320) no-repeat left top;
     }
     .card-content-top,
     .card-content-bottom{
@@ -76,9 +22,8 @@ img {
     }
 }
 
-.flipbox.flipbox-simple.flipbox-vertical,
-.flipbox.flipbox-simple.flipbox-horizontal{
-    .flipbox(800px, 320px, 0.6s);
+.flipbox.flipbox-simple {
+    .flipbox-extend(600px, 200px, 2s);
     margin: 20px auto;
     .card-cover{
         background: #ACE539;
@@ -86,36 +31,5 @@ img {
     .card-content {
         color: #FFF;
         background: rgba(51, 51, 51, 1);
-    }
-}
-
-
-/** -----------------------------------------------------
- *
- * Flipbox jolie demo
- *
- */
-.flipbox {
-    .demo {
-        display: block;
-        max-width: 760px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
-    .inner{
-        color: #FFF;
-        padding: 20px;
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-    }
-    .code {
-        color: #C4C4C4;
-    }
-
-    .class {
-        color: #FF00CC;
     }
 }

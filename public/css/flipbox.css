@@ -1,0 +1,178 @@
+/**
+ *
+ * # CSS Flipbox
+ *
+ * # License
+ *
+ * The MIT License (MIT)
+ * Copyright (c) 2015 Matthieu Lassalvy sixertoy.github@gmail.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *
+ * # Usage
+ *
+ * ## touch device
+ *      > ontouchstart="this.classList.toggle('hover');"
+ *
+ */
+/** -----------------------------------------------------------
+ *
+ * Variables/Extend
+ *
+ * ## Defaults
+ * > width: 800px;
+ * > height: 320px;
+ * > transition duration: 0.6s
+ *
+ */
+.flipbox,
+.flipbox .card,
+.flipbox .wrapper {
+  width: 800px;
+  height: 320px;
+}
+.flipbox.flipbox-simple .wrapper {
+  -webkit-transition: all 0.6s;
+          transition: all 0.6s;
+}
+.flipbox.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-page .wrapper .card-content-top,
+.flipbox.flipbox-page .wrapper .card-content-bottom {
+  /* @height / 2 */
+  height: 160px;
+}
+.flipbox.flipbox-page .wrapper .card-content-bottom {
+  top: 160px;
+}
+.flipbox.flipbox-page .wrapper .card {
+  /* @time / 2 */
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.flipbox.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-page .wrapper.hover.card-content-bottom,
+.flipbox.flipbox-page .wrapper:hover .card-content-bottom {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+/** -----------------------------------------------------------
+ *
+ * Flipbox base
+ *
+ */
+.flipbox .wrapper {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.flipbox .card {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+}
+/** -----------------------------------------------------------
+ *
+ * Flipbox type
+ * Simple horizontal & vertical
+ *
+ */
+.flipbox.flipbox-simple {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.flipbox.flipbox-simple .wrapper {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+}
+.flipbox.flipbox-simple .wrapper .card-cover {
+  z-index: 2;
+}
+.flipbox.flipbox-simple.flipbox-vertical .card-content,
+.flipbox.flipbox-simple.flipbox-vertical:hover .wrapper,
+.flipbox.flipbox-simple.flipbox-vertical.hover.wrapper {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.flipbox.flipbox-simple.flipbox-horizontal .card-content,
+.flipbox.flipbox-simple.flipbox-horizontal:hover .wrapper,
+.flipbox.flipbox-simple.flipbox-horizontal.hover .wrapper {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+/** -----------------------------------------------------------
+ *
+ * Flipbox type
+ * Page
+ *
+ */
+.flipbox.flipbox-page .wrapper {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.flipbox.flipbox-page .card {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-property: -webkit-transform;
+          transition-property: transform;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+.flipbox.flipbox-page .card-content-top,
+.flipbox.flipbox-page .card-content-bottom {
+  z-index: 2;
+}
+.flipbox.flipbox-page .card-content-bottom {
+  z-index: 3;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+          transform-origin: center top;
+}
+.flipbox.flipbox-page .card-cover {
+  z-index: 4;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+.flipbox.flipbox-page.hover .card-cover,
+.flipbox.flipbox-page:hover .card-cover {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+.flipbox.flipbox-page.hover .card-content-bottom,
+.flipbox.flipbox-page:hover .card-content-bottom {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}

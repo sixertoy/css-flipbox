@@ -1,0 +1,98 @@
+/* #########################################
+*
+*
+* Only for demo page
+*
+*
+ ######################################### */
+
+// Mixin
+.hidden() {
+    width: 0;
+    margin: 0;
+    height: 0;
+    padding: 0;
+    outline: none;
+    display: none;
+    line-height: 0;
+    overflow: hidden;
+    user-select: none;
+    letter-spacing: 0;
+    visibility: hidden;
+    .no-select();
+}
+
+/** -----------------------------------------------------
+ *
+ * HTML
+ *
+ */
+
+body, html {
+    min-height: 100%;
+}
+
+body {
+    font-size:12px;
+    color: #272727;
+    background: #FFF;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    margin:0;
+    padding:0;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+/** -----------------------------------------------------
+ *
+ * Defaults
+ *
+ */
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+
+.markdown-body pre {
+    border-left: 4px solid #0088FF;
+}
+
+
+/** -----------------------------------------------------
+ *
+ * Flipbox jolie demo
+ *
+ */
+.flipbox {
+    .demo {
+        display: block;
+        max-width: 760px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    .inner{
+        color: #FFF;
+        padding: 20px;
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    }
+    .code {
+        color: #C4C4C4;
+    }
+
+    .class {
+        color: #FF00CC;
+    }
+}
+

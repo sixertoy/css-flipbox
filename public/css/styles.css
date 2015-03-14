@@ -83,7 +83,7 @@ img {
 .flipbox.flipbox-page .card,
 .flipbox.flipbox-page .wrapper {
   width: 600px;
-  height: 200px;
+  height: 320px;
 }
 .flipbox.flipbox-page.flipbox-simple .wrapper {
   -webkit-transition: all 2s;
@@ -93,10 +93,10 @@ img {
 .flipbox.flipbox-page.flipbox-page .wrapper .card-content-top,
 .flipbox.flipbox-page.flipbox-page .wrapper .card-content-bottom {
   /* @height / 2 */
-  height: 100px;
+  height: 160px;
 }
 .flipbox.flipbox-page.flipbox-page .wrapper .card-content-bottom {
-  top: 100px;
+  top: 160px;
 }
 .flipbox.flipbox-page.flipbox-page .wrapper .card {
   /* @time / 2 */
@@ -104,14 +104,14 @@ img {
           transition-duration: 1s;
 }
 .flipbox.flipbox-page.flipbox-page .wrapper .card-cover,
-.flipbox.flipbox-page.flipbox-page .wrapper.hover.card-content-bottom,
+.flipbox.flipbox-page.flipbox-page .wrapper.hover .card-content-bottom,
 .flipbox.flipbox-page.flipbox-page .wrapper:hover .card-content-bottom {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
 }
 .flipbox.flipbox-page .card-cover {
   background-color: #ACE539;
-  background: url(http://placehold.it/800x320) no-repeat left top;
+  background: url(http://placehold.it/600x320) no-repeat left top;
 }
 .flipbox.flipbox-page .card-content-top,
 .flipbox.flipbox-page .card-content-bottom {
@@ -123,8 +123,8 @@ img {
 .flipbox.flipbox-simple,
 .flipbox.flipbox-simple .card,
 .flipbox.flipbox-simple .wrapper {
-  width: 600px;
-  height: 200px;
+  width: 800px;
+  height: 320px;
 }
 .flipbox.flipbox-simple.flipbox-simple .wrapper {
   -webkit-transition: all 2s;
@@ -134,10 +134,10 @@ img {
 .flipbox.flipbox-simple.flipbox-page .wrapper .card-content-top,
 .flipbox.flipbox-simple.flipbox-page .wrapper .card-content-bottom {
   /* @height / 2 */
-  height: 100px;
+  height: 160px;
 }
 .flipbox.flipbox-simple.flipbox-page .wrapper .card-content-bottom {
-  top: 100px;
+  top: 160px;
 }
 .flipbox.flipbox-simple.flipbox-page .wrapper .card {
   /* @time / 2 */
@@ -145,7 +145,7 @@ img {
           transition-duration: 1s;
 }
 .flipbox.flipbox-simple.flipbox-page .wrapper .card-cover,
-.flipbox.flipbox-simple.flipbox-page .wrapper.hover.card-content-bottom,
+.flipbox.flipbox-simple.flipbox-page .wrapper.hover .card-content-bottom,
 .flipbox.flipbox-simple.flipbox-page .wrapper:hover .card-content-bottom {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;

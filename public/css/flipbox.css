@@ -67,7 +67,7 @@
           transition-duration: 0.3s;
 }
 .flipbox.flipbox-page .wrapper .card-cover,
-.flipbox.flipbox-page .wrapper.hover.card-content-bottom,
+.flipbox.flipbox-page .wrapper.hover .card-content-bottom,
 .flipbox.flipbox-page .wrapper:hover .card-content-bottom {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
@@ -134,7 +134,7 @@
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
-.flipbox.flipbox-page .card {
+.flipbox.flipbox-page .wrapper .card {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition-delay: 0s;
@@ -144,11 +144,11 @@
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
 }
-.flipbox.flipbox-page .card-content-top,
-.flipbox.flipbox-page .card-content-bottom {
+.flipbox.flipbox-page .wrapper .card-content-top,
+.flipbox.flipbox-page .wrapper .card-content-bottom {
   z-index: 2;
 }
-.flipbox.flipbox-page .card-content-bottom {
+.flipbox.flipbox-page .wrapper .card-content-bottom {
   z-index: 3;
   -webkit-transform: rotateX(90deg);
           transform: rotateX(90deg);
@@ -156,7 +156,7 @@
       -ms-transform-origin: center top;
           transform-origin: center top;
 }
-.flipbox.flipbox-page .card-cover {
+.flipbox.flipbox-page .wrapper .card-cover {
   z-index: 4;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
@@ -164,15 +164,15 @@
       -ms-transform-origin: center bottom;
           transform-origin: center bottom;
 }
-.flipbox.flipbox-page.hover .card-cover,
-.flipbox.flipbox-page:hover .card-cover {
+.flipbox.flipbox-page .wrapper.hover .card.card-cover,
+.flipbox.flipbox-page .wrapper:hover .card.card-cover {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   -webkit-transform: rotateX(-90deg);
           transform: rotateX(-90deg);
 }
-.flipbox.flipbox-page.hover .card-content-bottom,
-.flipbox.flipbox-page:hover .card-content-bottom {
+.flipbox.flipbox-page .wrapper.hover .card.card-content-bottom,
+.flipbox.flipbox-page .wrapper:hover .card.card-content-bottom {
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
 }

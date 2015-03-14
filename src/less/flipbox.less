@@ -65,7 +65,7 @@
             transition-duration: @duration;
         }
         .card-cover,
-        &.hover.card-content-bottom,
+        &.hover .card-content-bottom,
         &:hover .card-content-bottom{
             transition-delay: @duration;
         }
@@ -125,10 +125,8 @@
 // Page Type
 //
 .flipbox-page(){
-    &.flipbox-page {
-        .wrapper {
-            perspective: 1000px;
-        }
+    &.flipbox-page .wrapper {
+        perspective: 1000px;
         .card {
             backface-visibility: hidden;
             // last props
@@ -150,13 +148,13 @@
                 transform-origin: center bottom;
             }
         }
-        &.hover,
-        &:hover {
-            .card-cover {
+        &.hover .card,
+        &:hover .card{
+            &.card-cover {
                 transition-delay: 0s;
                 transform: rotateX(-90deg);
             }
-            .card-content-bottom{
+            &.card-content-bottom{
                 transform: rotateX(0deg);
             }
         }

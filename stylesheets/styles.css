@@ -295,35 +295,6 @@ footer {
           transition-delay: 0.3s;
 }
 
-.flipbox .demo {
-  display: block;
-  max-width: 760px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.flipbox .inner {
-  color: #FFF;
-  padding: 20px;
-}
-.flipbox .inner h1 {
-  text-align: center;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-.flipbox .code {
-  color: #C4C4C4;
-}
-.flipbox .class {
-  color: #FF00CC;
-}
-/* #########################################
-*
-*
-* Flipbox styles
-* as Less Mixin
-*
-*
- ######################################### */
 /** --------------------------------------
  *
  * Page type
@@ -332,4 +303,7 @@ footer {
 .flipbox.flipbox-simple,
 .flipbox.flipbox-page {
   margin: 20px auto;
+}
+.flipbox.flipbox-simple .card-content {
+    background: #ACE539;
 }

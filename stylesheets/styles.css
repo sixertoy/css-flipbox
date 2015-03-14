@@ -253,3 +253,44 @@ footer {
     color:#444;
   }
 }
+
+/** -------------------------------------------------------
+ * 
+ * Flipbox
+ * 
+ */
+.flipbox,
+.flipbox .card,
+.flipbox .wrapper {
+  /* @width */
+  width: 400px;
+  /* @height */
+  height: 320px;
+}
+.flipbox.flipbox-simple .wrapper {
+  /* @time */
+  -webkit-transition: all 0.6s;
+          transition: all 0.6s;
+}
+.flipbox.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-page .wrapper .card-content-top,
+.flipbox.flipbox-page .wrapper .card-content-bottom {
+  /* @height / 2 */
+  height: 160px;
+}
+.flipbox.flipbox-page .wrapper .card-content-bottom {
+  /* @height / 2 */
+  top: 160px;
+}
+.flipbox.flipbox-page .wrapper .card {
+  /* @time / 2 */
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.flipbox.flipbox-page .wrapper .card-cover,
+.flipbox.flipbox-page .wrapper.hover .card-content-bottom,
+.flipbox.flipbox-page .wrapper:hover .card-content-bottom {
+  /* @time / 2 */
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}

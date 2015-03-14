@@ -1,5 +1,5 @@
 
-# CSS-Flipbox
+# CSS-Flipbox [![Built with Grunt][grunt-img]](http://gruntjs.com/) [![MIT License][license-img]][license-url]
 
 > Pure CSS Flip Effect
 
@@ -191,3 +191,6 @@
     .flipbox(800px, 320px, 0.6s);
 }
 ```
+
+[license-img]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+[license-url]: LICENSE-MIT

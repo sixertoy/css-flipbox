@@ -329,6 +329,7 @@ footer {
  * Page type
  *
  */
+.flipbox.flipbox-simple,
 .flipbox.flipbox-page {
   margin: 20px auto;
 }

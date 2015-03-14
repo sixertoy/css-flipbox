@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Css-flipbox : Pure CSS Flip Effect">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Css-flipbox</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sixertoy/css-flipbox">View on GitHub</a>
+
+          <h1 id="project_title">Css-flipbox</h1>
+          <h2 id="project_tagline">Pure CSS Flip Effect</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sixertoy/css-flipbox/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sixertoy/css-flipbox/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="css-flipbox" class="anchor" href="#css-flipbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS-Flipbox</h1>
+
+<blockquote>
+<p>Pure CSS Flip Effect</p>
+</blockquote>
+
+<h2>
+<a id="flipbox-page" class="anchor" href="#flipbox-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flipbox page</h2>
+
+<blockquote>
+<p>HTML</p>
+</blockquote>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>flipbox flipbox-page<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrapper<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">img</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>//placehold.it/600x320<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-content-top<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">h1</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Title background&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">h1</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-cover<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-content-bottom<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">p</span>&gt;lorem ipsum dolor sit amet consectuer&lt;/<span class="pl-ent">p</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<blockquote>
+<p>Less</p>
+</blockquote>
+
+<div class="highlight highlight-less"><pre><span class="pl-e">.flipbox.flipbox-page</span> {
+    <span class="pl-e">.flipbox-extend</span>(<span class="pl-c1">600</span><span class="pl-k">px</span>,<span class="pl-c1"> 320</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span>s);
+    <span class="pl-s3">margin</span>:<span class="pl-c1"> 20</span><span class="pl-k">px</span> <span class="pl-sc">auto</span>;
+    <span class="pl-e">.card-cover</span>{
+        <span class="pl-s3">background-color</span>: <span class="pl-c1">#ACE539</span>;
+        <span class="pl-s3">background</span>: <span class="pl-s3">url(<span class="pl-v">http://placehold.it/600x320</span>)</span> <span class="pl-sc">no-repeat</span> <span class="pl-s3">left</span> <span class="pl-s3">top</span>;
+    }
+    <span class="pl-e">.card-content-top</span>,
+    <span class="pl-e">.card-content-bottom</span>{
+        <span class="pl-s3">background</span>: <span class="pl-s3">rgba</span>(<span class="pl-c1">0</span>,<span class="pl-c1"> 0</span>,<span class="pl-c1"> 0</span>,<span class="pl-c1"> 0.25</span>);
+    }
+}</pre></div>
+
+<h2>
+<a id="flipbox-simple" class="anchor" href="#flipbox-simple" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flipbox simple</h2>
+
+<blockquote>
+<p>Less</p>
+</blockquote>
+
+<div class="highlight highlight-less"><pre><span class="pl-e">.flipbox.flipbox-simple</span>{
+    <span class="pl-s3">margin</span>:<span class="pl-c1"> 20</span><span class="pl-k">px</span> <span class="pl-sc">auto</span>;
+    <span class="pl-e">.card-cover</span>{
+        <span class="pl-s3">background</span>: <span class="pl-c1">#ACE539</span>;
+    }
+    <span class="pl-e">.card-content</span> {
+        <span class="pl-s3">color</span>: <span class="pl-c1">#FFF</span>;
+        <span class="pl-s3">background</span>: <span class="pl-s3">rgba</span>(<span class="pl-c1">51</span>,<span class="pl-c1"> 51</span>,<span class="pl-c1"> 51</span>,<span class="pl-c1"> 1</span>);
+    }
+}</pre></div>
+
+<h3>
+<a id="horizontal" class="anchor" href="#horizontal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Horizontal</h3>
+
+<blockquote>
+<p>HTML</p>
+</blockquote>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>flipbox flipbox-simple flipbox-horizontal<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrapper<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-cover<span class="pl-pds">"</span></span> <span class="pl-e">style</span>=<span class="pl-s1"><span class="pl-pds">"</span>background: url(http://placehold.it/800x320<span class="pl-ii">&amp;</span>text=horizontal) no-repeat left top;<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-content<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>inner<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">h1</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Horizontal flip axis&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">h1</span>&gt;
+                &lt;<span class="pl-ent">pre</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>demo<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="flipbox flipbox-simple flipbox-horizontal"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+<span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="wrapper"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+    <span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="card card-cover" style="&lt;/<span class="pl-ent">span</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>&gt;background: url(http://placehold.it/800x320);&lt;/<span class="pl-ent">span</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+    <span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+    <span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="card card-content"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+        &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;lt;</span>h1<span class="pl-c1">&amp;gt;&amp;lt;</span>span<span class="pl-c1">&amp;gt;</span>Lorem ipsum dolor sit amet<span class="pl-c1">&amp;lt;</span>/span<span class="pl-c1">&amp;gt;&amp;lt;</span>/h1<span class="pl-c1">&amp;gt;</span>&lt;/<span class="pl-ent">span</span>&gt;
+        &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;lt;</span>p<span class="pl-c1">&amp;gt;</span>Consectetur adipiscing elit. Ut ut est metus. Nullam imperdiet efficitur erat non accumsan. In molestie venenatis eros eget ullamcorper. Cras volutpat tellus ornare mattis mattis. Vestibulum vestibulum a orci vestibulum dictum.<span class="pl-c1">&amp;lt;</span>/p<span class="pl-c1">&amp;gt;</span>&lt;/<span class="pl-ent">span</span>&gt;
+    <span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+<span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+<span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+                &lt;/<span class="pl-ent">pre</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<blockquote>
+<p>Less</p>
+</blockquote>
+
+<div class="highlight highlight-less"><pre><span class="pl-e">.flipbox.flipbox-horizontal</span>{
+    <span class="pl-e">.flipbox-extend</span>(<span class="pl-c1">800</span><span class="pl-k">px</span>,<span class="pl-c1"> 320</span><span class="pl-k">px</span>,<span class="pl-c1"> 2</span>s);
+}</pre></div>
+
+<h3>
+<a id="vertical" class="anchor" href="#vertical" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vertical</h3>
+
+<blockquote>
+<p>HTML</p>
+</blockquote>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>flipbox flipbox-simple flipbox-vertical<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrapper<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-cover<span class="pl-pds">"</span></span> <span class="pl-e">style</span>=<span class="pl-s1"><span class="pl-pds">"</span>background: url(http://placehold.it/800x320<span class="pl-ii">&amp;</span>text=vertical) no-repeat left top;<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>card card-content<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>inner<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">h1</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Vertical flip axis&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">h1</span>&gt;
+                &lt;<span class="pl-ent">pre</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>demo<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="flipbox flipbox-simple flipbox-vertical"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+<span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="wrapper"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+    <span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="card card-cover" style="&lt;/<span class="pl-ent">span</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>&gt;background: url(http://placehold.it/800x320);&lt;/<span class="pl-ent">span</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+    <span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+    <span class="pl-c1">&amp;lt;</span>div &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>class<span class="pl-pds">"</span></span>&gt;class="card card-content"&lt;/<span class="pl-ent">span</span>&gt;<span class="pl-c1">&amp;gt;</span>
+        &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;lt;</span>h1<span class="pl-c1">&amp;gt;&amp;lt;</span>span<span class="pl-c1">&amp;gt;</span>Lorem ipsum dolor sit amet<span class="pl-c1">&amp;lt;</span>/span<span class="pl-c1">&amp;gt;&amp;lt;</span>/h1<span class="pl-c1">&amp;gt;</span>&lt;/<span class="pl-ent">span</span>&gt;
+        &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;lt;</span>p<span class="pl-c1">&amp;gt;</span>Consectetur adipiscing elit. Ut ut est metus. Nullam imperdiet efficitur erat non accumsan. In molestie venenatis eros eget ullamcorper. Cras volutpat tellus ornare mattis mattis. Vestibulum vestibulum a orci vestibulum dictum.<span class="pl-c1">&amp;lt;</span>/p<span class="pl-c1">&amp;gt;</span>&lt;/<span class="pl-ent">span</span>&gt;
+    <span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+<span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+<span class="pl-c1">&amp;lt;</span>/div<span class="pl-c1">&amp;gt;</span>
+                &lt;/<span class="pl-ent">pre</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<blockquote>
+<p>Less</p>
+</blockquote>
+
+<div class="highlight highlight-less"><pre><span class="pl-e">.flipbox.flipbox-vertical</span>{
+    <span class="pl-e">.flipbox-extend</span>(<span class="pl-c1">800</span><span class="pl-k">px</span>,<span class="pl-c1"> 320</span><span class="pl-k">px</span>,<span class="pl-c1"> 0.6</span>s);
+}</pre></div>
+
+<h2>
+<a id="css-overrides" class="anchor" href="#css-overrides" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Overrides</h2>
+
+<blockquote>
+<p>HTML</p>
+</blockquote>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>/css/flipbox.css<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<blockquote>
+<p>CSS</p>
+</blockquote>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">.flipbox</span>,
+<span class="pl-e">.flipbox</span> <span class="pl-e">.card</span>,
+<span class="pl-e">.flipbox</span> <span class="pl-e">.wrapper</span> {
+  <span class="pl-c">/* @width */</span>
+  <span class="pl-mp"><span class="pl-s3">width</span></span>: <span class="pl-c1">800<span class="pl-k">px</span></span>;
+  <span class="pl-c">/* @height */</span>
+  <span class="pl-mp"><span class="pl-s3">height</span></span>: <span class="pl-c1">320<span class="pl-k">px</span></span>;
+}
+<span class="pl-e">.flipbox.flipbox-simple</span> <span class="pl-e">.wrapper</span> {
+  <span class="pl-c">/* @time */</span>
+  <span class="pl-mp">-webkit-<span class="pl-s3">transition</span></span>: <span class="pl-sc">all</span> <span class="pl-c1">0.6<span class="pl-k">s</span></span>;
+          <span class="pl-mp"><span class="pl-s3">transition</span></span>: <span class="pl-sc">all</span> <span class="pl-c1">0.6<span class="pl-k">s</span></span>;
+}
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span> <span class="pl-e">.card-cover</span>,
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span> <span class="pl-e">.card-content-top</span>,
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span> <span class="pl-e">.card-content-bottom</span> {
+  <span class="pl-c">/* @height / 2 */</span>
+  <span class="pl-mp"><span class="pl-s3">height</span></span>: <span class="pl-c1">160<span class="pl-k">px</span></span>;
+}
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span> <span class="pl-e">.card-content-bottom</span> {
+  <span class="pl-c">/* @height / 2 */</span>
+  <span class="pl-mp"><span class="pl-s3">top</span></span>: <span class="pl-c1">160<span class="pl-k">px</span></span>;
+}
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span> <span class="pl-e">.card</span> {
+  <span class="pl-c">/* @time / 2 */</span>
+  <span class="pl-mp">-webkit-<span class="pl-s3">transition-duration</span></span>: <span class="pl-c1">0.3<span class="pl-k">s</span></span>;
+          <span class="pl-mp"><span class="pl-s3">transition-duration</span></span>: <span class="pl-c1">0.3<span class="pl-k">s</span></span>;
+}
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span> <span class="pl-e">.card-cover</span>,
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper.hover</span> <span class="pl-e">.card-content-bottom</span>,
+<span class="pl-e">.flipbox.flipbox-page</span> <span class="pl-e">.wrapper</span><span class="pl-e">:hover</span> <span class="pl-e">.card-content-bottom</span> {
+  <span class="pl-c">/* @time / 2 */</span>
+  <span class="pl-mp">-webkit-<span class="pl-s3">transition-delay</span></span>: <span class="pl-c1">0.3<span class="pl-k">s</span></span>;
+          <span class="pl-mp"><span class="pl-s3">transition-delay</span></span>: <span class="pl-c1">0.3<span class="pl-k">s</span></span>;
+}</pre></div>
+
+<h2>
+<a id="less-mixin" class="anchor" href="#less-mixin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Less Mixin</h2>
+
+<blockquote>
+<p>Less</p>
+</blockquote>
+
+<div class="highlight highlight-less"><pre><span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">'</span>flipbox.less<span class="pl-pds">'</span></span>;</pre></div>
+
+<div class="highlight highlight-less"><pre><span class="pl-e">.my-custom-class</span> {
+    <span class="pl-e">.flipbox</span>(<span class="pl-c1">800</span><span class="pl-k">px</span>,<span class="pl-c1"> 320</span><span class="pl-k">px</span>,<span class="pl-c1"> 0.6</span>s);
+}</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Css-flipbox maintained by <a href="https://github.com/sixertoy">sixertoy</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

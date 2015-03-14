@@ -305,5 +305,9 @@ footer {
   margin: 20px auto;
 }
 .flipbox.flipbox-simple .card-content {
+    text-align: center;
     background: #ACE539;
+}
+.flipbox.flipbox-simple .card-content .inner{
+    padding: 20px;
 }

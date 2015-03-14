@@ -1,6 +1,6 @@
 {
   "name": "css-flipbox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Pure CSS Flip Effect",
   "main": "html/index.html",
   "scripts": {

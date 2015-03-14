@@ -192,5 +192,7 @@
 }
 ```
 
+[grunt-img]: https://cdn.gruntjs.com/builtwith.png
+
 [license-img]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: LICENSE-MIT
